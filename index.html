@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Quarterly Earnings – Reveal.js</title>
+
+    <!-- Reveal.js styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css" id="theme">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        
+        <!-- Title Slide -->
+        <section>
+          <h1>Q2 2025 Earnings Report</h1>
+          <p><small>Prepared with Reveal.js</small></p>
+        </section>
+
+        <!-- Agenda -->
+        <section>
+          <h2>Agenda</h2>
+          <ul>
+            <li>Revenue Overview</li>
+            <li>Expenses</li>
+            <li>Profit & Loss</li>
+            <li>Outlook</li>
+          </ul>
+        </section>
+
+        <!-- Revenue -->
+        <section>
+          <h2>Revenue</h2>
+          <p>Total: <strong>$12.4M</strong> (↑ 15% YoY)</p>
+        </section>
+
+        <!-- Revenue Chart -->
+        <section>
+          <h2>Revenue Breakdown</h2>
+          <canvas id="revenueChart" width="600" height="400"></canvas>
+        </section>
+
+        <!-- Expenses -->
+        <section>
+          <h2>Expenses</h2>
+          <p>Total: <strong>$8.1M</strong></p>
+          <ul>
+            <li>R&D: $3.2M</li>
+            <li>Marketing: $2.1M</li>
+            <li>Operations: $2.8M</li>
+          </ul>
+        </section>
+
+        <!-- Profit -->
+        <section>
+          <h2>Profit & Loss</h2>
+          <p><strong>$4.3M</strong> Net Profit</p>
+        </section>
+
+        <!-- Outlook -->
+        <section>
+          <h2>Outlook</h2>
+          <blockquote>
+            "We project 20% growth next quarter, driven by new product launches."
+          </blockquote>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- Reveal.js -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      Reveal.initialize();
+
+      // Chart.js setup
+      const ctx = document.getElementById('revenueChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Q1 2025', 'Q2 2025', 'Q3 2025 (proj)', 'Q4 2025 (proj)'],
+          datasets: [{
+            label: 'Revenue (in $M)',
+            data: [10.8, 12.4, 14.2, 15.5],
+            backgroundColor: 'rgba(54, 162, 235, 0.7)'
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: true },
+            title: {
+              display: true,
+              text: 'Quarterly Revenue Trend'
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
