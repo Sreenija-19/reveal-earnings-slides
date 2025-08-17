@@ -15,12 +15,9 @@
         <section>
           <h1>Company Earnings Report</h1>
           <p>Email: 23f1001052@ds.study.iitm.ac.in</p>
-          <aside class="notes">
-            Introduce yourself with your name and IITM email.
-          </aside>
         </section>
 
-        <!-- Slide 2: Markdown (email included again) -->
+        <!-- Slide 2: Markdown -->
         <section data-markdown>
           <textarea data-template>
 # About This Presentation
@@ -53,11 +50,12 @@ print(roi(2000, 1500))  # Output: 0.33
           </code></pre>
         </section>
 
-        <!-- Slide 5: Math -->
+        <!-- Slide 5: Math Equations -->
         <section>
-          <h2>Financial Formula</h2>
-          <p>Return on Investment (ROI):</p>
-          <p>$$ ROI = \frac{Revenue - Cost}{Cost} $$</p>
+          <h2>Financial Formulas</h2>
+          <p>Inline ROI formula: \( ROI = \frac{Revenue - Cost}{Cost} \)</p>
+          <p>Block equation:</p>
+          <p>$$ NPV = \sum_{t=1}^{T} \frac{CashFlow_t}{(1+r)^t} $$</p>
         </section>
 
       </div>
@@ -71,7 +69,7 @@ print(roi(2000, 1500))  # Output: 0.33
     <script>
       Reveal.initialize({
         hash: true,
-        plugins: [ RevealMarkdown, RevealHighlight, RevealMath ]
+        plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX ]
       });
     </script>
   </body>
