@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Quarterly Earnings — RevealJS Deck
 
 Static, CDN-based RevealJS presentation ready for GitHub Pages.
@@ -13,3 +14,7 @@ Static, CDN-based RevealJS presentation ready for GitHub Pages.
 5. To refresh cached content, append a query param: `?v=1`, `?v=2`, etc.
 
 > Tip: The deck already includes your email (📧 23f1001052@ds.study.iitm.ac.in), a Markdown slide, fragments, code with syntax highlighting, MathJax equations, and speaker notes.
+=======
+# reveal-earnings-slides
+A pretty brief slide
+>>>>>>> 19d6307889c0159e08ad9a27a2796f2bbf9224d2
