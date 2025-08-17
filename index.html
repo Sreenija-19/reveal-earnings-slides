@@ -1,92 +1,86 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Reveal Earnings Slides</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Reveal Earnings Presentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/theme/black.min.css" id="theme">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
 
-  <!-- Reveal.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css" id="theme">
+        <!-- Slide 1: Title -->
+        <section>
+          <h1>Company Earnings Report</h1>
+          <p><strong>Presenter:</strong> 23f1001052@ds.study.iitm.ac.in</p>
+          <aside class="notes">
+            Welcome the audience and introduce yourself with your email ID.
+          </aside>
+        </section>
 
-  <!-- Code highlighting -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/monokai.css">
-</head>
-<body>
-<div class="reveal">
-  <div class="slides">
+        <!-- Slide 2: Markdown -->
+        <section data-markdown>
+          <textarea data-template>
+# About This Presentation
+- Built with **Reveal.js**
+- Includes Markdown slides
+- Supports math, code, and fragments
+          </textarea>
+        </section>
 
-    <!-- Slide 1 -->
-    <section>
-      <h2>Welcome</h2>
-      <p>Email: <strong>23f1001052@ds.study.iitm.ac.in</strong></p>
-      <aside class="notes">
-        Introduce yourself and mention this is for IITM BS coursework.
-      </aside>
-    </section>
+        <!-- Slide 3: Fragments -->
+        <section>
+          <h2>Revenue Breakdown</h2>
+          <ul>
+            <li class="fragment">Q1: $1.2M</li>
+            <li class="fragment">Q2: $1.5M</li>
+            <li class="fragment">Q3: $1.8M</li>
+            <li class="fragment">Q4: $2.0M</li>
+          </ul>
+          <aside class="notes">
+            Reveal each quarter's revenue gradually using fragments.
+          </aside>
+        </section>
 
-    <!-- Slide 2 (Markdown example) -->
-    <section data-markdown>
-      <textarea data-template>
-        ## Markdown Slide  
-        This slide is written in **Markdown**.  
-        - Point one  
-        - Point two  
-        - Point three  
+        <!-- Slide 4: Code Highlighting -->
+        <section>
+          <h2>Sample Python Code</h2>
+          <pre><code class="language-python">
+def roi(revenue, cost):
+    return (revenue - cost) / cost
 
-        Note: Markdown support makes it quick to write content.
-      </textarea>
-    </section>
+print(roi(2000, 1500))  # Output: 0.33
+          </code></pre>
+          <aside class="notes">
+            Show how ROI is calculated using Python.
+          </aside>
+        </section>
 
-    <!-- Slide 3 (Fragments / Animation) -->
-    <section>
-      <h2>Animated Content</h2>
-      <p class="fragment">First reveal</p>
-      <p class="fragment">Second reveal</p>
-      <p class="fragment">Third reveal</p>
-      <aside class="notes">
-        Each point will appear one at a time with fragments.
-      </aside>
-    </section>
+        <!-- Slide 5: Math -->
+        <section>
+          <h2>Financial Formula</h2>
+          <p>Return on Investment (ROI):</p>
+          <p>$$ ROI = \frac{Revenue - Cost}{Cost} $$</p>
+          <aside class="notes">
+            Present the financial formula using LaTeX math.
+          </aside>
+        </section>
 
-    <!-- Slide 4 (Code Highlighting) -->
-    <section>
-      <h2>Code Sample</h2>
-      <pre><code class="language-python">
-def roi(revenue, spend):
-    return (revenue - spend) / spend
+      </div>
+    </div>
 
-print(roi(12000, 8000))
-      </code></pre>
-      <aside class="notes">
-        Show a simple ROI calculation in Python.
-      </aside>
-    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/plugin/markdown/markdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/plugin/highlight/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.0.4/plugin/math/math.min.js"></script>
 
-    <!-- Slide 5 (Math Equations) -->
-    <section>
-      <h2>Financial Formula</h2>
-      <p>Future Value Formula:</p>
-      <p>\[ FV = PV \times (1 + r)^n \]</p>
-      <aside class="notes">
-        Explain FV = Future Value, PV = Present Value, r = interest rate, n = periods.
-      </aside>
-    </section>
-
-  </div>
-</div>
-
-<!-- Reveal.js Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/highlight.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/math/math.js"></script>
-
-<script>
-  Reveal.initialize({
-    hash: true,
-    plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX ]
-  });
-</script>
-</body>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        plugins: [ RevealMarkdown, RevealHighlight, RevealMath ]
+      });
+    </script>
+  </body>
 </html>
