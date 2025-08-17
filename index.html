@@ -1,105 +1,92 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Quarterly Earnings – Reveal.js</title>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Reveal Earnings Slides</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-    <!-- Reveal.js styles -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css" id="theme">
-  </head>
-  <body>
-    <div class="reveal">
-      <div class="slides">
-        
-        <!-- Title Slide -->
-        <section>
-          <h1>Q2 2025 Earnings Report</h1>
-          <p><small>Prepared with Reveal.js</small></p>
-        </section>
+  <!-- Reveal.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css" id="theme">
 
-        <!-- Agenda -->
-        <section>
-          <h2>Agenda</h2>
-          <ul>
-            <li>Revenue Overview</li>
-            <li>Expenses</li>
-            <li>Profit & Loss</li>
-            <li>Outlook</li>
-          </ul>
-        </section>
+  <!-- Code highlighting -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/monokai.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
 
-        <!-- Revenue -->
-        <section>
-          <h2>Revenue</h2>
-          <p>Total: <strong>$12.4M</strong> (↑ 15% YoY)</p>
-        </section>
+    <!-- Slide 1 -->
+    <section>
+      <h2>Welcome</h2>
+      <p>Email: <strong>23f1001052@ds.study.iitm.ac.in</strong></p>
+      <aside class="notes">
+        Introduce yourself and mention this is for IITM BS coursework.
+      </aside>
+    </section>
 
-        <!-- Revenue Chart -->
-        <section>
-          <h2>Revenue Breakdown</h2>
-          <canvas id="revenueChart" width="600" height="400"></canvas>
-        </section>
+    <!-- Slide 2 (Markdown example) -->
+    <section data-markdown>
+      <textarea data-template>
+        ## Markdown Slide  
+        This slide is written in **Markdown**.  
+        - Point one  
+        - Point two  
+        - Point three  
 
-        <!-- Expenses -->
-        <section>
-          <h2>Expenses</h2>
-          <p>Total: <strong>$8.1M</strong></p>
-          <ul>
-            <li>R&D: $3.2M</li>
-            <li>Marketing: $2.1M</li>
-            <li>Operations: $2.8M</li>
-          </ul>
-        </section>
+        Note: Markdown support makes it quick to write content.
+      </textarea>
+    </section>
 
-        <!-- Profit -->
-        <section>
-          <h2>Profit & Loss</h2>
-          <p><strong>$4.3M</strong> Net Profit</p>
-        </section>
+    <!-- Slide 3 (Fragments / Animation) -->
+    <section>
+      <h2>Animated Content</h2>
+      <p class="fragment">First reveal</p>
+      <p class="fragment">Second reveal</p>
+      <p class="fragment">Third reveal</p>
+      <aside class="notes">
+        Each point will appear one at a time with fragments.
+      </aside>
+    </section>
 
-        <!-- Outlook -->
-        <section>
-          <h2>Outlook</h2>
-          <blockquote>
-            "We project 20% growth next quarter, driven by new product launches."
-          </blockquote>
-        </section>
+    <!-- Slide 4 (Code Highlighting) -->
+    <section>
+      <h2>Code Sample</h2>
+      <pre><code class="language-python">
+def roi(revenue, spend):
+    return (revenue - spend) / spend
 
-      </div>
-    </div>
+print(roi(12000, 8000))
+      </code></pre>
+      <aside class="notes">
+        Show a simple ROI calculation in Python.
+      </aside>
+    </section>
 
-    <!-- Reveal.js -->
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
-    <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Slide 5 (Math Equations) -->
+    <section>
+      <h2>Financial Formula</h2>
+      <p>Future Value Formula:</p>
+      <p>\[ FV = PV \times (1 + r)^n \]</p>
+      <aside class="notes">
+        Explain FV = Future Value, PV = Present Value, r = interest rate, n = periods.
+      </aside>
+    </section>
 
-    <script>
-      Reveal.initialize();
+  </div>
+</div>
 
-      // Chart.js setup
-      const ctx = document.getElementById('revenueChart').getContext('2d');
-      new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ['Q1 2025', 'Q2 2025', 'Q3 2025 (proj)', 'Q4 2025 (proj)'],
-          datasets: [{
-            label: 'Revenue (in $M)',
-            data: [10.8, 12.4, 14.2, 15.5],
-            backgroundColor: 'rgba(54, 162, 235, 0.7)'
-          }]
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: { display: true },
-            title: {
-              display: true,
-              text: 'Quarterly Revenue Trend'
-            }
-          }
-        }
-      });
-    </script>
-  </body>
+<!-- Reveal.js Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/math/math.js"></script>
+
+<script>
+  Reveal.initialize({
+    hash: true,
+    plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX ]
+  });
+</script>
+</body>
 </html>
